@@ -1,0 +1,24 @@
+public class strCheck {
+		// 문자열 내의 같은 문자쌍 체크 
+	public static boolean strCheck(String a, String b) {
+		if (a == null) {
+			return b == null;
+		} else if (b == null) {
+			return false;
+		}
+		// 문자열 a, b의 문자들을 차례로 저장
+		char[] astr = a.toCharArray();
+		char[] bstr = b.toCharArray();
+		// 정렬
+		Arrays.sort(astr);
+		Arrays.sort(bstr);
+		return Arrays.equals(astr,  bstr);
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(strCheck("apple", "ealpp"));
+	}
+
+}
